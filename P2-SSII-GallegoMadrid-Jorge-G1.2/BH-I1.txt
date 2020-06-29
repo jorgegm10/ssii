@@ -1,0 +1,5 @@
+4
+Prediccion = Nuboso
+Mes = Mayo
+Profundidad = 7
+Precipitaciones = Fuertes

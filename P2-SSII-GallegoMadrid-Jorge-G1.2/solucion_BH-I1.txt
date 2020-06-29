@@ -1,0 +1,16 @@
+Buscando una solución en el dominio DETECCION DE INUNDACIONES
+El objetivo es: Inundacion
+La base de hechos inicial (BH-I1.txt) es: 
+   Mes = Mayo
+   Precipitaciones = Fuertes
+   Prediccion = Nuboso
+   Profundidad = 7
+-----------------------------------------------
+
+Solución encontrada: Inundacion = Si
+
+Reglas usadas para llegar a la solucion: 
+   R21: Si Prediccion = Nuboso Entonces Lluvia = Ligera
+   R16: Si Precipitaciones = Fuertes Entonces Cambio = Subiendo
+   R19: Si Profundidad > 5 Entonces Nivel = Alto
+   R31: Si Cambio = Subiendo y Nivel = Alto y Lluvia = Ligera Entonces Inundacion = Si

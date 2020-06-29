@@ -1,0 +1,57 @@
+Manual de usuario
+Algoritmo genético para la resolución de un sudoku.
+
+Ejecución
+	Para ejecutar el programa es necesario hacerlo desde la línea de comandos en windows, con el siguiente formato:
+		sudoku.exe <nombre_fichero> <tam_pobl> <op_selec> <p_cruce> <p_mutac>
+
+Argumentos
+	nombre_fichero: fichero del que se va a leer el sudoku que se quiere resolver.
+	tam_pobl: tamaño de la población de individuos.
+	op_selec: operador para seleccionar los individuos.
+	p_cruce: probabilidad de cruce entre individuos.
+	p_mutac : probabilidad de mutación para un individuo.
+
+Formato de entrada
+	Formato que tiene que tener el sudoku contenido en el fichero de entrada. En la primera linea tiene que aparecer el tamaño del sudoku, en las siguientes el propio sudoku. Las posiciones “en blanco” tienen que contener un 0. Ejemplo:
+	    9
+		0 0 0 4 0 3 0 0 0
+		0 0 8 0 1 0 0 0 0
+		5 0 2 0 0 0 0 1 0
+		4 0 0 0 0 0 0 0 0
+		0 3 0 0 6 0 9 4 2
+		1 8 9 3 2 0 5 0 0
+		0 7 0 5 0 0 0 2 0
+		6 0 4 0 0 2 0 0 3
+		2 5 0 0 4 0 1 8 0
+
+Ejemplo de ejecución e interpretación de la salida
+
+				$>sudoku.exe 1.txt 150 torneo 0.8 0.1
+				
+					Solucion del sudoku 1.txt con los siguientes parametros:
+					   -Poblacion: 150
+					   -Operador de seleccion: torneo
+					   -Probabilidad de cruce: 0.8
+					   -Probabilidad de mutacion: 0.1
+
+					Resolviendo el sudoku...
+					Sudoku solucion: 
+					    9 1 7 4 5 3 2 6 8 
+					    3 6 8 2 1 7 4 9 5 
+					    5 4 2 6 9 8 3 1 7 
+					    4 2 6 9 7 5 8 3 1 
+					    7 3 5 8 6 1 9 4 2 
+					    1 8 9 3 2 4 5 7 6 
+					    8 7 1 5 3 9 6 2 4 
+					    6 9 4 1 8 2 7 5 3 
+					    2 5 3 7 4 6 1 8 9 
+					    
+					Valor de fitness: 0
+
+					Presione una tecla para continuar . . . 
+
+
+
+Como podemos ver, tras ejecutar el programa, se muestra por pantalla el sudoku que estamos resolviendo y los parámetros que hemos elegido. Mientras se resuelve el problema, veremos en pantalla “Resolviendo el sudoku…”.
+Cuando el algoritmo finalice, nos mostrará el sudoku solución que ha encontrado, así como el mejor valor de fitness que ha alcanzado.

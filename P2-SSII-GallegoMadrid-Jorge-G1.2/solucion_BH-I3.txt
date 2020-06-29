@@ -1,0 +1,8 @@
+Buscando una solución en el dominio DETECCION DE INUNDACIONES
+El objetivo es: Inundacion
+La base de hechos inicial (BH-I3.txt) es: 
+   Mes = Enero
+   Precipitaciones = Fuertes
+   Profundidad = 10
+-----------------------------------------------
+Solución no encontrada

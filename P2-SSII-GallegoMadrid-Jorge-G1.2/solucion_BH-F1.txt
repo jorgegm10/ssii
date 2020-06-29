@@ -1,0 +1,15 @@
+Buscando una solución en el dominio IDENTIFICACION DE FRUTAS
+El objetivo es: Fruta
+La base de hechos inicial (BH-F1.txt) es: 
+   Color = Rojo
+   Diametro = 3
+   Forma = Redonda
+   NSemillas = 1
+-----------------------------------------------
+
+Solución encontrada: Fruta = Cereza
+
+Reglas usadas para llegar a la solucion: 
+   R5: Si Forma = Redonda y Diametro < 10 Entonces ClaseFrutal = Arbol
+   R6: Si NSemillas = 1 Entonces TipoSemilla = Hueso
+   R13: Si ClaseFrutal = Arbol y Color = Rojo y TipoSemilla = Hueso Entonces Fruta = Cereza

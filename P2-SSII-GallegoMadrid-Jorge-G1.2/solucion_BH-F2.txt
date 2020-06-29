@@ -1,0 +1,15 @@
+Buscando una solución en el dominio IDENTIFICACION DE FRUTAS
+El objetivo es: Fruta
+La base de hechos inicial (BH-F2.txt) es: 
+   Color = Verde
+   Diametro = 8
+   Forma = Redonda
+   NSemillas = 10
+-----------------------------------------------
+
+Solución encontrada: Fruta = Manzana
+
+Reglas usadas para llegar a la solucion: 
+   R5: Si Forma = Redonda y Diametro < 10 Entonces ClaseFrutal = Arbol
+   R7: Si NSemillas > 1 Entonces TipoSemilla = Multiple
+   R16: Si ClaseFrutal = Arbol y Color = Verde y TipoSemilla = Multiple Entonces Fruta = Manzana

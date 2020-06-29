@@ -1,0 +1,41 @@
+Manual de usuario
+Sistema basado en reglas.
+
+Ejecución
+	Para ejecutar el programa es necesario hacerlo desde la línea de comandos en windows, con el siguiente formato:
+	Motor.exe <base_conocimientos> <configuracion> <base_hechos>
+
+Argumentos
+	base_conocimientos: fichero donde se encuentran las reglas.
+	configuracion: fichero con la configuración del sistema.
+	base_hechos: fichero en el que se encuentran los hechos iniciales.
+
+Ejemplo de ejecución
+	>Motor.exe BC-F.txt Config-F.txt BH-F1.txt
+	Leyendo los ficheros...
+	Dominio: IDENTIFICACION DE FRUTAS
+	Aplicando el algoritmo y buscando una solucion...
+	Solucion encontrada, detalles en: solucion_BH-F1.txt
+
+	Buscando una solución en el dominio IDENTIFICACION DE FRUTAS
+	El objetivo es: Fruta
+	La base de hechos inicial (BH-F1.txt) es: 
+	   Color = Rojo
+	   Diametro = 3
+	   Forma = Redonda
+	   NSemillas = 1
+	-----------------------------------------------
+
+	Solución encontrada: Fruta = Cereza
+
+	Reglas usadas para llegar a la solucion: 
+	   R5: Si Forma = Redonda y Diametro < 10 Entonces ClaseFrutal = Arbol
+	   R6: Si NSemillas = 1 Entonces TipoSemilla = Hueso
+	   R13: Si ClaseFrutal = Arbol y Color = Rojo y TipoSemilla = Hueso Entonces Fruta = Cereza
+
+Interpretación de la salida
+	En la consola se muestra el progreso de la ejecución, así como el dominio y si se ha encontrado una solución.
+	Respecto al archivo solución generado:
+		En primer lugar se indica el dominio en el que estamos trabajando, el objetivo que queremos conseguir y la base de hechos de la que partimos.
+		En segundo lugar, se muestra la solución a la que ha llegado el algoritmo. En caso de no haber llegado a ninguna, se muestra “solución no encontrada”.
+		Finalmente, se imprime la reconstrucción del camino que ha usado el SBR para llegar a la solución, mostrando las reglas usadas para ello.
